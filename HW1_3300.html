@@ -1,0 +1,69 @@
+<!--Author: Yunjie Bi Title: HW1_3300-->
+
+<html>
+    <head>
+    </head>
+    
+    <body>
+        <p>
+            The object name is calculator for Q3 and calculator1 for Q4.
+        </p>
+        
+        <p>Q1: int array
+        </p>
+        
+        <p>
+            Q2: Result in the console
+            <script>
+                var fruits = ["apple", "pear", "orange"];
+                
+                fruits.forEach(function(s,i){console.log(i+" "+fruits[i]);});
+            </script>
+        </p>
+        
+        <p>Q3: Result in the console
+            <script>
+                var calculator = {x:0,
+                plus: function(i){this.x=this.x+i; return this;},
+                minus: function(a){this.x=this.x-a; return this;},
+                times: function(b){this.x = this.x*b; return this;},
+                dividedBy: function(c){this.x =this.x/c; return this;}
+                };
+                
+            </script>
+        </p>
+        
+        <p>
+            Q4: Result in the console
+            <script>
+            var calculator1 = {
+            x:0,
+            operation: function(a){
+                this.x = a(this.x);
+                return this;
+                }
+            };
+            </script>
+        </p>
+        
+        <p>Q5: 
+            <span class="findable">one</span>
+            <span class="findable">two</span>
+            <span class="findable">three</span>
+            
+            <script>
+                //var a = document.getElementsByTagName("span");
+                var a = document.getElementsByClassName("findable");
+            </script>
+            <br/>
+            No, it doesn't work. Because the getElementByClassName() returns a node list, not an array as in Q2, thus it cannot
+            use functions for arrays including forEach().
+            
+            <script>
+                for(var i=0;i<a.length;i++){
+                    a[i].innerText = i;
+                }
+            </script>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+svg{border: solid black 1px;}
+#pl{fill: none; stroke-width:4; stroke:black;}
+#path1{stroke:red; stroke-width:3; fill: #dddddd;}
+#squares{fill:#0000ff;}
+</style>
+</head>
+
+<body>
+    
+    <svg id="canvas" height="400" width="400">
+        <polyline id="pl" points="10,50 20,10 30,50 40,10"/>
+        <path id="path1" d="M 100 100 l 100 0 0 100" />
+        <path id="path1" d="M 100 100 L 100 0 0 100 Z" />
+        <g id="squares" transform="translate(20,20) rotate(30, 320, 75)">
+            <rect x="300" y="50" width="30" height="30"/>
+            <rect x="320" y="100" width="30" height="30"/>
+            <rect x="340" y="50" width="30" height="30"/>
+        </g>
+        
+        
+        
+    </svg>
+</body>
+
+
+</html>

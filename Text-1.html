@@ -1,0 +1,83 @@
+<html>
+    
+    <head>
+        <script>
+            //function addOne(a){
+            //  return a+1;
+            //}
+            var oneTwoThree = [1,2,3];
+            var addOne = function(x){return x+1;};
+            
+            
+            
+            var format = function (s,f){
+                console.log(f(s));
+            };
+            
+            for(var i=0; i<oneTwoThree.length;i++){
+                format(oneTwoThree[i], function(s){return "N"+s;});
+            }
+            
+            oneTwoThree.forEach(function (s, i){console.log(s + " "+i);});
+            oneTwoThree.map(function (s, i){return s + " "+i;});
+            
+            var widget = {
+                foo : "Lester Robbins",
+                sayHi : function(){console.log("Hello");}
+                };
+                
+                widget = {
+                foo : "Lester Robbins",
+                sayHi : function(){console.log(foo);}
+                };
+                
+                widget = {
+                foo : "Lester Robbins",
+                sayHi : function(){console.log(this);}
+                };
+            
+            
+            function Widget(){
+                return {foo:"lester robbins", sayHi:function(){console.log(this.foo);}};
+            }
+            
+            function Widget(){
+                this.foo = "Lester Robbins";
+                this.sayHi = function (){console.log(this.foo);};
+            }
+            
+            
+        </script>
+        
+        <style>
+            div{
+                font-family: "Calibri";
+            }
+            
+            svg {border: solid black 1px;}
+            
+            .header{
+                color:#ff0000;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="d1" class="header">Hello!</div>
+        
+        <svg height = "200" width = "200">
+            <circle id = "c1" cx = "100" cy="100" r="10"></circle>
+        </svg>
+        
+        <input id="t1" type="text" value="hello"/>
+        <input id="slider" type="range" min="0" max="100" value="50"/>
+        
+        <script>
+            document.getElementById("d1").innerText = "Bye!";
+            document.getElementById("t1").onclick = function(){console.log("clicked");};
+            document.getElementById("slider").onchange = function(){document.getElementById("c1").setAttribute("r",document.getElementById("slider").value);};
+            
+        </script>
+    </body>
+    
+</html>
